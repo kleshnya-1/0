@@ -18,14 +18,12 @@ public class Main {
 */
         flatOne.addRoomAuto(8);
 
-       // flatOne.addAppliance();
+        // flatOne.addAppliance();
 
-    flatOne.getRoomRandom();
-    flatOne.getRoomRandom();
-    flatOne.getRoomRandom();
+        flatOne.getRoomRandom();
+        flatOne.getRoomRandom();
+        flatOne.getRoomRandom();
         System.out.println(flatOne.getRoomRandom());
-
-
 
 
         System.out.println();
@@ -36,10 +34,10 @@ public class Main {
         flatOne.setAppliance(new Lighter(45,false,"2-th room","3C0olour"));
 */
         flatOne.addApplianceAuto(14);
-       // flatOne.addAppliance();
+        // flatOne.addAppliance();
         //flatOne.getSortByPower();
         //flatOne.plugAppliance(45, "3-th room");
-        flatOne.findApplianceInRange(20,90);
+        flatOne.findApplianceInRange(20, 90);
 
         // flatOne.getSortByPower();
         // flatOne.calculapeConsumption();

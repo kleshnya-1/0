@@ -5,8 +5,7 @@ import TreeOfAppliances.Appliance;
 import TreeOfAppliances.CustomerElectronics;
 import TreeOfAppliances.Lighter;
 import TreeOfAppliances.OtherAppliance;
-import lombok.Data;
-import lombok.extern.java.Log;
+
 import lombok.extern.slf4j.Slf4j;
 
 
@@ -97,13 +96,15 @@ public class Creator {
 
 
         }
-        log.info("Вручную добавлен прибор " + power+ "Вт");
+        log.info("Вручную добавлен прибор " + power + "Вт");
 
     }
 
-    public void addAppliance(Appliance appliance){
+    public void addAppliance(Appliance appliance) {
         ApplianceHash.add(appliance);
-    };
+    }
+
+
     public void addRoom() {
 
 
@@ -118,13 +119,13 @@ public class Creator {
         Scanner sc = new Scanner(System.in);
         String roomScanner = sc.nextLine();
         this.roomHash.add(roomScanner);
-        log.info("Добавлена комната "+ roomScanner+" через консоль");
+        log.info("Добавлена комната " + roomScanner + " через консоль");
     }
 
     public void addRoomString(String roomName) {
 
         this.roomHash.add(roomName);
-        log.info("Добавлена комната "+ roomName+" через конструктор");
+        log.info("Добавлена комната " + roomName + " через конструктор");
 
     }
 
@@ -161,7 +162,7 @@ public class Creator {
 
             //if current index is equal to random number
             if (currentIndex == randomNumber) {
-                log.info("Был вызван геттер случайной комнаты, который передал: "+ randomElement);
+                log.info("Был вызван геттер случайной комнаты, который передал: " + randomElement);
                 return randomElement;
             }
 
@@ -203,7 +204,7 @@ public class Creator {
 
 
         }
-        log.info("Был вызван метод автоматического добавления прибора, который добавил "+numberOfAutoApps+ " прибора(-ов)");
+        log.info("Был вызван метод автоматического добавления прибора, который добавил " + numberOfAutoApps + " прибора(-ов)");
     }
 
     public void getSortByPower() {
@@ -225,7 +226,7 @@ public class Creator {
                 System.out.println("Прибор " + ap + " был успешно включен в сеть");
                 ap.setPlugged(true);
                 ApplianceHash.add(ap);
-                log.info("Прибор "+ap+ " включен в сеть методом");
+                log.info("Прибор " + ap + " включен в сеть методом");
                 break;
             }
         }
@@ -276,7 +277,7 @@ public class Creator {
 
 
         System.out.println();
-        log.info("Метод поиска вызван и в диапазоне " + powerFrom + "-"+powerTo +"W найдено " + counter+ " приборов(-а)");
+        log.info("Метод поиска вызван и в диапазоне " + powerFrom + "-" + powerTo + "W найдено " + counter + " приборов(-а)");
     }
 
 
@@ -340,7 +341,7 @@ public class Creator {
         }
         System.out.println("Суммарное энергопотребление приборов №" + listOfIndexes +
                 " составляет " + sumPower + "W");
-        log.info("Метод подсчета суммарного потребления приборов был вызван для "+ listOfIndexes.size() +" приборов");
+        log.info("Метод подсчета суммарного потребления приборов был вызван для " + listOfIndexes.size() + " приборов");
 
 
     }
